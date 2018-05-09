@@ -19,6 +19,12 @@ nav li {
   display: inline;
 }
 
+.logo
+{
+  width: 15%;
+  height: auto;
+}
+
 nav a {
   color: #222222;
   text-align: center;
