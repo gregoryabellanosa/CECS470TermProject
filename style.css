@@ -1,0 +1,170 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  padding: 1% 5% 0% 5%;
+  margin: 10px 0px 10px 0px;
+}
+
+nav ul {
+  margin: 1% 0% 1% 0%;
+  list-style-type: none;
+  float: right;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: #222222;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+nav .currentpage
+{
+  color: #3C75AF;
+  border-bottom: 1.5px solid #3C75AF;
+  /* text-decoration: underline; */
+}
+
+nav a:hover
+{
+  color: #3C75AF;
+}
+
+.hire {
+  border: 1px solid #3C75AF;
+  background-color: #3C75AF;
+  border-radius: 4px;
+  color: #FFF;
+  padding: 8px 20px 8px 20px;
+}
+
+.hire:hover
+{
+  background-color: #FFF;
+}
+
+.bluetitlesection
+{
+  background-color: #F6F8FB;
+}
+
+.bluetitlesection h1
+{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-weight: 100;
+  text-align: center;
+  color: #222222;
+}
+
+.project--container
+{
+  max-width: 90%;
+  margin: 10% 5% 0% 5%;
+}
+
+.project--container--blue
+{
+  max-width: 90%;
+  margin: 10% 5% 0% 5%;
+  background-color: #F6F8FB;
+}
+
+.project--photo
+{
+  float: left;
+  width: 41%;
+  height: auto;
+}
+
+.project--photo img
+{
+  width: 100%;
+  height: auto;
+}
+
+.project--text
+{
+  width: 58%;
+  height: auto;
+  float: right;
+  padding-left: 1%;
+  padding-top: 0px;
+}
+
+.project--text h2
+{
+  margin: 0px;
+  color: #3C75AF;
+  font-weight: lighter;
+}
+
+.project--text h4
+{
+  margin: 5px 0px 0px 0px;
+  font-weight: 100;
+  color: #3C75AF;
+}
+
+.project--text p
+{
+  margin: 5px 0px 0px 0px;
+  color: #222222;
+}
+
+.githublink
+{
+  border: 1px solid #3C75AF;
+  background-color: #3C75AF;
+  border-radius: 4px;
+  color: #FFF;
+  padding: 8px 20px 8px 20px;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+.githublink:hover
+{
+  background-color: #FFF;
+  color: #3C75AF;
+}
+
+.separator
+{
+  clear: both;
+}
+
+.contactad
+{
+  max-width: 90%;
+  margin: 5% 5% 0% 5%;
+  background-color: #F6F8FB;
+  height: 100px;
+  border-radius: 4px;
+}
+
+.contactad h3
+{
+  font-weight: lighter;
+}
+
+.contactad p
+{
+  font-weight: 100;
+}
+
+footer
+{
+  margin-top: 5%;
+  background-color: #3C75AF;
+  height: 200px;
+}
