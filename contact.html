@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>Projects | Faith Yap</title>
     <link rel="stylesheet" href="css/project-style.css">
+    <link rel="stylesheet" href="css/contact-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
   </head>
   <body>
     <nav>
-      <a href="index.html"><img class="logo" src="img/faithyaplogo.png"></a>
+      <a href="index.html"><img class="logo" src="faithyaplogo.png"></a>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -18,7 +18,38 @@
       </ul>
     </nav>
     <div>
-      <h1>This is the contact page.</h1>
+        <div class="bluetitlesection">
+      <h1>Contact Me</h1>
+    </div>
+      <form method="post" action="process.php">
+                <label for="name">Your Name</label><br/>
+                <input type="text" id="name"/><br/><br/>
+
+                <label for="email">Your Email </label><br/>
+                <input type="text" id= "email"/><br/><br/>
+
+                <label for="email">Your Phone Number </label><br/>
+                <input type="text" id= "phoneNumber"/><br/><br/>
+
+                <label for="email">Subject </label><br/>
+                <input type="text" id= "subject"/><br/><br/>
+
+                <div class="selections">
+                    <label for="contactType1" class="choice"><input type="radio" id="contactType1" value="Job Inquiry" name="contactType">Job Inquiry</label><br/>
+                    <label for="contactType2" class="choice"><input type="radio" id="contactType2" value="Project Commission" name="contactType">Project Commission</label><br/>
+                </div><br/>
+
+                <label for="message">Your Message</label><br/>
+                <textarea rows="3" cols="60" id="message"></textarea><br/><br/>
+            <input type="submit" value="CONTACT ME">
+        </form> <br/><br/>
+    
+        <div class="contactad">
+            <h2>Download my resume!</h2>
+            See more about my past work experiences and projects.
+
+            <button type="button">DOWNLOAD</button><br/><br/>
+        </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,26 @@
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.selections{
+    padding-left: 10px;
+}
+
+input{
+    padding-top: 8px;
+    font-size: 15px;
+}
+
+input:focus{
+    outline: none;
+}
+
+textarea{
+    width: auto;
+    resize: none;
+}
+
+form{
+    padding: 5%;
+}
