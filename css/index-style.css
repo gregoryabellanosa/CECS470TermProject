@@ -7,8 +7,10 @@
 	box-sizing: border-box;
 }
 
-body{
+body, html{
 	font-family: 'Lato', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 p{
@@ -23,7 +25,7 @@ h2{
 
 .wrapper{
 	width: 100%;
-	padding: 0 1em;
+	padding: 0;
 }
 
 nav {
@@ -74,41 +76,13 @@ nav a:hover
   background-color: #FFF;
 }
 
-/* .navbar-logo{
-	font-family: kenzo;
-	font-size: 2em;
-	margin: 0.6em 0;
-	display:inline-block;
-}
-
-.navbar-links{
-	float: right;
-}
-
-.navbar-links li{
-	display: inline;
-	list-style-type: none;
-	margin: 1em;
-	padding-top: 0.2em;
-}
-
-.navbar-links li a {
-	text-decoration: none;
-	font-size: 1.2em;
-	padding: 1em;
-	color: #000000;
-}
-
-.hire-btn{
-	background-color: #236B8E;
-	border-radius: 10px 10px 10px 10px;
-} */
 
 .row{
 	width: 100%;
 	clear:both;
 	margin-top: 2em;
 	display: inline-block;
+	padding: 0 6em;
 }
 
 .column-3{
@@ -116,7 +90,7 @@ nav a:hover
 }
 
 .column-4{
-	width: 32%;
+	width: 33%;
 }
 
 .column-6{
@@ -142,6 +116,7 @@ nav a:hover
     }
 }
 
+
 .social-icons i{
 	font-size: 50px;
 	border-radius: 50%;
@@ -149,9 +124,7 @@ nav a:hover
 	color: #3C75AF;
 }
 
-#about-me{
-	padding: 3em 0;
-}
+
 
 .vl{
     font-size: 2.5em;
@@ -196,6 +169,7 @@ h3{
 #projects{
 	background-color: #ebe9e991;
 }
+
 
 .project-desc {
 	background-color: white;
