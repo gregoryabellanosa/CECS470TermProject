@@ -97,6 +97,10 @@ nav a:hover
 	width: 45%;
 }
 
+.column-8{
+	width: 75%;
+}
+
 .column-12{
 	width:90%;
 }
@@ -191,7 +195,7 @@ h3{
 	height: auto;
 }
 
-.project-tagline{
+.tagline{
 	color: #3C75AF;
 }
 
@@ -226,4 +230,9 @@ h3{
 /* selected link */
 .project-button-link a:active {
     color: white;
+}
+
+#connection{
+	font-size:  75%;
+	background-color: #ebe9e991;
 }
