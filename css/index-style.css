@@ -30,41 +30,6 @@ h2{
 	padding: 0;
 }
 
-nav {
-  padding: 1% 5% 0% 5%;
-  margin: 10px 0px 10px 0px;
-}
-
-nav ul {
-  margin: 1% 0% 1% 0%;
-  list-style-type: none;
-  float: right;
-}
-
-nav li {
-  display: inline;
-}
-
-nav a {
-  color: #222222;
-  text-align: center;
-  padding: 10px;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
-nav .currentpage
-{
-  color: #3C75AF;
-  border-bottom: 1.5px solid #3C75AF;
-  /* text-decoration: underline; */
-}
-
-nav a:hover
-{
-  color: #3C75AF;
-}
-
 .hire {
   border: 1px solid #3C75AF;
   background-color: #3C75AF;
@@ -97,7 +62,7 @@ nav a:hover
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
 
 	.column-s-3{
 		width: 25%
@@ -129,7 +94,7 @@ nav a:hover
 	}
 }
 
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 601px){
 	/*Desktop*/
 
 	.column-3{
