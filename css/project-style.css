@@ -90,20 +90,26 @@ nav a:hover
   float: left;
   width: 41%;
   height: auto;
+  overflow: hidden;
+  /* padding-top: 2%;
+  padding-bottom: 2%; */
 }
 
 .project--photo img
 {
   width: 100%;
   height: auto;
+  border-radius: 4px;
+  /* height: 200px; */
+  /* width: auto; */
 }
 
 .project--text
 {
-  width: 58%;
+  width: 57%;
   height: auto;
   float: right;
-  padding-left: 1%;
+  padding-left: 2%;
   padding-top: 0px;
 }
 
@@ -156,16 +162,42 @@ nav a:hover
   background-color: #F6F8FB;
   height: 100px;
   border-radius: 4px;
+  padding: 2.5%;
 }
 
 .contactad h3
 {
   font-weight: lighter;
+  font-size: 1.5em;
+  color: #3C75AF;
 }
 
 .contactad p
 {
+  line-height: 0px;
   font-weight: 100;
+}
+
+.contactadright
+{
+  float: right;
+  padding-top: 4%;
+}
+
+.contactadbutton
+{
+  border: 1px solid #3C75AF;
+  background-color: #3C75AF;
+  border-radius: 4px;
+  color: #FFF;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.contactadbutton:hover
+{
+  background-color: #F6F8FB;
+  color: #3C75AF;
 }
 
 footer
@@ -173,4 +205,68 @@ footer
   margin-top: 5%;
   background-color: #3C75AF;
   height: 200px;
+}
+
+.footerinfo
+{
+  max-width: 90%;
+  margin: 5% 5% 0% 5%;
+}
+
+.footerinfo img
+{
+  padding-top: 5%;
+}
+
+.footerinfo p
+{
+  color: #ffffff;
+}
+
+.footerinfo a
+{
+  color: #000000;
+  text-decoration: none;
+}
+
+.footerinfo a:hover
+{
+  color: #ffffff;
+}
+
+.createdby
+{
+  padding-top: 4%;
+  float: right;
+}
+
+.createdby h4
+{
+  color: #ffffff;
+  font-weight: 200;
+  margin: 0px;
+}
+
+.createdby p
+{
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 100;
+  line-height: 5px;
+}
+
+.createdby hr
+{
+  border-width: 0.5px;
+}
+
+.createdby a
+{
+  color: #000000;
+  text-decoration: none;
+}
+
+.createdby a:hover
+{
+  color: #ffffff;
 }

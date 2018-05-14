@@ -1,101 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Projects | Faith Yap</title>
-    <link rel="stylesheet" href="css/project-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-  </head>
-  <body>
-    <nav>
-      <a href="index.html"><img class="logo" src="img/faithyaplogo.png"></a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="currentpage" href="projects.html">Projects</a></li>
-        <li><a href=""><i class="fa fa-download" aria-hidden="true"></i> Resume</a></li>
-        <li><a class="hire" href="contact.html">Hire Me!</a></li>
-      </ul>
-    </nav>
-    <div class="bluetitlesection">
-      <h1>My Projects</h1>
-    </div>
-    <div class="project--container">
-      <div class="project--photo">
-        <img src="img/coder.png" alt="Person holding laptop">
-      </div>
-      <div class="project--text">
-        <h2>Down // Web Application</h2>
-        <h4>Group Project with Team Constellation</h4>
-        <p>
-          Down serves as my capstone senior group project. Using a Java EE deveopment stack and deployed using Amazon web services, Down is a web application built using JSF for front end development and JPA for back end development. Down serves as my capstone senior group project. Using a Java EE deveopment stack and deployed using Amazon web services.
-        </p>
-        <br />
-        <a class="githublink" href="#"><i class="fa fa-github" aria-hidden="true"></i> &nbsp;View GitHub Repository &nbsp; <i class="fa fa-angle-right" aria-hidden="true"> </i></a>
-      </div>
-    </div>
-    <div class="separator">
-
-    </div>
-    <div class="project--container--blue">
-      <div class="project--photo">
-        <img src="img/coder.png" alt="Person holding laptop">
-      </div>
-      <div class="project--text">
-        <h2>Charm // Console Game</h2>
-        <h4>Individual Class Assignment</h4>
-        <p>
-          This project was pursued in my own time as I tried to explore this concept. I taught myself to code in this language using this editor and learned how to do certian skills that helped.
-        </p>
-        <br />
-        <a class="githublink" href="#"><i class="fa fa-github" aria-hidden="true"></i> &nbsp;View GitHub Repository &nbsp; <i class="fa fa-angle-right" aria-hidden="true"> </i></a>
-      </div>
-    </div>
-    <div class="separator">
-
-    </div>
-    <div class="project--container--blue">
-      <div class="project--photo">
-        <img src="img/coder.png" alt="Person holding laptop">
-      </div>
-      <div class="project--text">
-        <h2>Charm // Console Game</h2>
-        <h4>Individual Class Assignment</h4>
-        <p>
-          This project was pursued in my own time as I tried to explore this concept. I taught myself to code in this language using this editor and learned how to do certian skills that helped.
-        </p>
-        <br />
-        <a class="githublink" href="#"><i class="fa fa-github" aria-hidden="true"></i> &nbsp;View GitHub Repository &nbsp; <i class="fa fa-angle-right" aria-hidden="true"> </i></a>
-      </div>
-    </div>
-    <div class="separator">
-
-    </div>
-    <div class="project--container--blue">
-      <div class="project--photo">
-        <img src="img/coder.png" alt="Person holding laptop">
-      </div>
-      <div class="project--text">
-        <h2>Charm // Console Game</h2>
-        <h4>Individual Class Assignment</h4>
-        <p>
-          This project was pursued in my own time as I tried to explore this concept. I taught myself to code in this language using this editor and learned how to do certian skills that helped.
-        </p>
-        <br />
-        <a class="githublink" href="#"><i class="fa fa-github" aria-hidden="true"></i> &nbsp;View GitHub Repository &nbsp; <i class="fa fa-angle-right" aria-hidden="true"> </i></a>
-      </div>
-    </div>
-    <div class="separator">
-
-    </div>
-    <div class="contactad">
-      <h3>Questions about my work?</h3>
-      <p>
-        Reach out to me to learn more about my projects and what I learned from each one!
-      </p>
-    </div>
-    <footer>
-
-    </footer>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <title>Projects | Faith Yap</title>
+        <link rel="stylesheet" href="css/project-style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/project.js"></script>
+        <script src="js/data.js"></script>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html"><img class="logo" src="img/faithyaplogo.png"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="currentpage" href="projects.html">Projects</a></li>
+                <li><a href=""><i class="fa fa-download" aria-hidden="true"></i> Resume</a></li>
+                <li><a class="hire" href="contact.html">Hire Me!</a></li>
+            </ul>
+        </nav>
+        <div class="bluetitlesection">
+            <h1>My Projects</h1>
+        </div>
+        <script>createProjectModules();</script>
+        <br /><br /><br />
+        <div class="bluetitlesection">
+            <h1>Notable Experiences</h1>
+        </div>
+        <script>createExperienceModules();</script>
+        <div class="contactad">
+            <div class="contactadright">
+              <a class="contactadbutton" href="contact.html">Contact Me!</a>
+            </div>
+            <h3>Questions about my work?</h3>
+            <p>
+                Reach out to me to learn more about my projects and what I learned from each one!
+            </p>
+        </div>
+        <footer>
+          <div class="footerinfo">
+            <img class="logo" src="img/faithyaplogoinverted.png">
+            <div class="createdby">
+              <h4>Website Created By:</h4>
+              <p><i class="fa fa-male"></i> &nbsp;Gregory Abellanosa [ <a href="mailto:gregoryabellanosa@gmail.com">gregoryabellanosa@gmail.com</a> ]</p>
+              <p><i class="fa fa-female"></i> &nbsp;Caren Briones [ <a href="mailto:carenpbriones@gmail.com">carenpbriones@gmail.com</a> ]</p>
+              <p><i class="fa fa-male"></i> &nbsp;Marco Tran [ <a href="mailto:mtran0132@gmail.com">mtran0132@gmail.com</a> ]</p>
+              <hr>
+              <p>Latest Update: <!--#echo var="LAST_MODIFIED"--> </p>
+            </div>
+            <p><a href="index.html">Home</a> | <a class="currentpage" href="projects.html">Projects</a> | <a href=""><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a> | <a href="contact.html">Contact</a> </p>
+          </div>
+        </footer>
+    </body>
 </html>
