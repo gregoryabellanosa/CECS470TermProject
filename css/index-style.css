@@ -11,11 +11,13 @@ body, html{
 	font-family: 'Lato', sans-serif;
 	margin: 0;
 	padding: 0;
+	display:table;
 }
 
 p{
 	font-size: 1.5em;
 }
+
 h2{
 	color: #3C75AF;
 }
@@ -76,6 +78,14 @@ nav a:hover
   background-color: #FFF;
 }
 
+.hire-connection {
+  border: 1px solid #3C75AF;
+  background-color: #3C75AF;
+  border-radius: 4px;
+  color: #FFF;
+  padding: 8px 20px 8px 20px;
+  text-decoration: none;
+}
 
 .row{
 	width: 100%;
@@ -85,26 +95,68 @@ nav a:hover
 	padding: 0 6em;
 }
 
-.column-3{
-	width: 25%
+
+
+@media only screen and (max-width: 768px) {
+
+	.column-s-3{
+		width: 25%
+	}
+
+	.column-s-4{
+		width: 33.33%;
+	}
+
+	.column-s-6{
+		width: 50%;
+	}
+
+	.column-s-offset-6{
+		margin-left: 37% !important;
+	}
+
+	.column-s-8{
+		width: 75%;
+	}
+
+	.column-s-12{
+		width:100vw;
+		padding: 5%;
+	}
+
+	.row{
+		padding: 0 2em;
+	}
 }
 
-.column-4{
-	width: 33%;
-}
+@media only screen and (min-width: 769px){
+	/*Desktop*/
 
-.column-6{
-	width: 45%;
-}
+	.column-3{
+		width: 25%
+	}
 
-.column-8{
-	width: 75%;
-}
+	.column-4{
+		width: 33.33%;
+	}
 
-.column-12{
-	width:90%;
-}
+	.column-6{
+		width: 50%;
+	}
 
+	.column-offset-6{
+		margin-left: 37% !important;
+	}
+
+	.column-8{
+		width: 75%;
+	}
+
+	.column-12{
+		width:100%;
+	}
+
+}
 [class*="column-"]{
 
     margin: 0 auto;
@@ -113,14 +165,6 @@ nav a:hover
     float:left;
 }
 
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="column-"] {
-        width: 100%;
-    }
-}
-
-
 .social-icons i{
 	font-size: 50px;
 	border-radius: 50%;
@@ -128,7 +172,10 @@ nav a:hover
 	color: #3C75AF;
 }
 
-
+.profile-picture{
+	max-width:100%;
+	height: auto
+}
 
 .vl{
     font-size: 2.5em;
@@ -171,9 +218,13 @@ h3{
 }
 
 #projects{
-	background-color: #ebe9e991;
+	background-color: #F4F2F2;
 }
 
+#connection{
+	background-color: #F4F2F2;
+	padding: 2em 2.5em;
+}
 
 .project-desc {
 	background-color: white;
@@ -232,7 +283,8 @@ h3{
     color: white;
 }
 
-#connection{
-	font-size:  75%;
-	background-color: #ebe9e991;
+.footer{
+	max-width: 100%
+	height: 300px;
+	background-color: #3C75AF;
 }
