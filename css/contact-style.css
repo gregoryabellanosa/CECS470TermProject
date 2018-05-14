@@ -12,15 +12,76 @@ input{
     font-size: 15px;
 }
 
-input:focus{
+input:focus, textarea:focus, button:focus{
     outline: none;
 }
 
 textarea{
     width: auto;
     resize: none;
+    border: none;
+    border-bottom: 1px solid black;
 }
 
 form{
-    padding: 5%;
+    padding: 15px;
+}
+
+button, input[type=submit] {
+	border-radius: 6px;
+	background-color: #3C75AF;
+	padding: 10px 20px;
+    color: white;
+}
+
+.profilephoto{
+    float: left;
+    width: 100%;
+    padding: 15px;
+}
+
+.messageform{
+    float: left;
+    padding: 15px;
+}
+
+@media screen and (min-width: 600px) {
+    .profilephoto {
+        width: 30%;
+    }
+    .leftcolumnform{
+        width: 50%;
+    }
+    .rightcolumnform{
+        width: 50%;
+    }
+    .selectionsrowform{
+        width: 100%;
+    }
+    .messagerowform{
+        width: 100%;
+    }
+    .contactad{
+        width: 100%;
+    }
+}
+
+.contactad{
+    float:left;
+    padding: 20px;
+}
+
+.profilephoto img{
+    border-radius: 50%;
+    max-width: 360px;
+    width:100%;
+}
+
+.errormsg{
+    padding-left: 20px;
+    color: red;
+}
+
+.leftcolumnform, .rightcolumnform, .selectionsrowform, .messagerowform{
+    float: left;
 }
