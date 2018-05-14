@@ -15,11 +15,11 @@
 	<nav class="topnav" id="nav">	
 		<a href="index.html"><img alt="picture1" class="logo" src="img/faithyaplogo.png"></a>	
 		<ul>
-			<li><a class="currentpage" href="index.html">Home</a></li>
+			<li><a class="currentpage" href="index.php">Home</a></li>
 			<li><a href="projects.html">Projects</a></li>
 			<li><a href=""><i class="fa fa-download" aria-hidden="true"></i> Resume</a></li>
 			<li><a class="hire" href="contact.html">Hire Me!</a></li>
-			<li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()"><i class="fa fa-bars"></i></a></li>
 		</ul>
 	</nav>
 	<div class="wrapper">

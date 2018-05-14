@@ -1,4 +1,4 @@
-function myFunction() {
+function hamburgerMenu() {
     var x = document.getElementById("nav");
     if (x.className === "topnav") {
         x.className += " responsive";
