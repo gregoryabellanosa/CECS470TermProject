@@ -91,14 +91,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['message_type'] = $_POST['message_type'];
         $_SESSION['message_body'] = $_POST['message_body'];
 //        header("Location: results.php");
-    }
-    
-    $stmt->execute();
+        $stmt->execute();
 
-    $stmt->close();
-    $conn->close();
-    
-    
+        $stmt->close();
+        $conn->close();
+    }
 }
 
 echo "<div class=\"topbanner\">This website is a student project and not a commercial site.</div>";
