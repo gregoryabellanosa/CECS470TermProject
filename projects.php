@@ -107,7 +107,7 @@ echo "<div class=\"topbanner\"><marquee>This website is a student project and no
         <!-- <script>createExperienceModules();</script> -->
         <div class="contactad">
             <div class="contactadright">
-              <a class="contactadbutton" href="contact.html">Contact Me!</a>
+              <a class="contactadbutton" href="contact.php">Contact Me!</a>
             </div>
             <h3>Questions about my work?</h3>
             <p>
