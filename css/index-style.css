@@ -195,6 +195,7 @@ h3{
 	background-color: white;
 	box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.4);
 	margin: 0 1em;
+	border-radius: 10px 10px;
 }
 
 .project-desc p{

@@ -18,16 +18,10 @@
 
 	  //create the sql statement
 	  $sql = "SELECT project_name, project_desc, project_tagline, project_img, project_img_alt FROM project";
-
 	  $result = mysqli_query($conn, $sql);
 	  
 	  //find out how many rows are in the result set
-	  
 	  $numrows=mysqli_num_rows($result);
-	  
-	
-	  
-
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +38,7 @@
 </head>
 <body>
 	<nav class="topnav" id="nav">	
-		<a href="index.html"><img alt="picture1" class="logo" src="img/faithyaplogo.png"></a>	
+		<a href="index.html"><img alt="Faith Yap" class="logo" src="img/faithyaplogo.png"></a>	
 		<ul>
 			<li><a class="currentpage" href="index.php">Home</a></li>
 			<li><a href="projects.php">Projects</a></li>
@@ -56,7 +50,7 @@
 	<div class="wrapper">
 		<div class="row">
 			<div class="column-6 column-s-12">
-				<img alt="picture1" class="profile-picture" src="http://via.placeholder.com/500x500">
+				<img alt="Faith Yap Profile Picture" class="profile-picture" src="img/faithprofile.jpg">
 			</div>
 			<div class="column-6 column-s-12" id="about-me">
 				<h2>Computer Science Graduate &amp; Something Else </h2>
@@ -67,7 +61,6 @@
 				<p>State the Goal and Objective</p>
 				<div class="social-icons">
 					<i class="fab fa-instagram"></i>
-					<i class="fab fa-twitter"></i>
 					<i class="fab fa-github"></i>
 					<i class="fab fa-linkedin"></i>
 				</div>
@@ -151,48 +144,7 @@
 						mysqli_close($conn);
 					}
 				?>
-				<div class="column-4 column-s-12">
-					<div class="project-desc">
-						<img alt="picture1" src="img/project-1.jpeg" class="project-image">
-						<h2><strong>Project 1</strong></h2>
-						<p class="tagline">Tagline</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</div>
-
-				</div>
-				<div class="column-4 column-s-12">
-					<div class="project">
-					<div class="project-desc">
-						<img alt="picture1" src="img/project-2.jpeg" class="project-image">
-						<h2><strong>Project 2</strong></h2>
-						<p class="tagline">Tagline</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</div>
-					</div>
-				</div>
-				<div class="column-4 column-s-12">
-					<div class="project-desc">
-						<img alt="picture1" src="img/project-3.jpeg" class="project-image">
-						<h2><strong>Project 3</strong></h2>
-						<p class="tagline">Tagline</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</div>
-				</div>
+				
 			</div>
 			<div class="row">
 				<div class="column-12 project-button-link">
@@ -251,5 +203,6 @@
 			</div>
 	<footer></footer>
 	<script src="js/nav.js"></script>
+	<script src="js/project-desc.js"></script>
 </body>
 </html>
