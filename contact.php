@@ -118,7 +118,7 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
         <a href="index.php"><img class="logo" src="img/faithyaplogo.png"></a>
         <ul>
             <li><a href="index.php">Home</a></li>
-                <li><a class="currentpage" href="projects.php">Projects</a></li>
+                <li><a href="projects.php">Projects</a></li>
                 <li><a href="FaithYap_Resume.pdf" download="FaithYap_Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Resume</a></li>
                 <li><a class="hire" href="contact.php">Hire Me!</a></li>
         </ul>
