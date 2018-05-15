@@ -22,6 +22,8 @@
 	  
 	  //find out how many rows are in the result set
 	  $numrows=mysqli_num_rows($result);
+
+    echo "<div class=\"topbanner\"><marquee>This website is a student project and not a commercial site.</marquee></div>";
 ?>
 
 <!DOCTYPE html>
@@ -200,8 +202,22 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
-	<footer></footer>
+	<footer>
+          <div class="footerinfo">
+            <img class="logo" src="img/faithyaplogoinverted.png">
+            <div class="createdby">
+              <h4>Website Created By:</h4>
+              <p><i class="fa fa-male"></i> &nbsp;Gregory Abellanosa [ <a href="mailto:gregoryabellanosa@gmail.com">gregoryabellanosa@gmail.com</a> ]</p>
+              <p><i class="fa fa-female"></i> &nbsp;Caren Briones [ <a href="mailto:carenpbriones@gmail.com">carenpbriones@gmail.com</a> ]</p>
+              <p><i class="fa fa-male"></i> &nbsp;Marco Tran [ <a href="mailto:mtran0132@gmail.com">mtran0132@gmail.com</a> ]</p>
+              <hr>
+              <p>Latest Update: <!--#echo var="LAST_MODIFIED"--> </p>
+            </div>
+            <p><a href="index.php">Home</a> | <a class="currentpage" href="projects.php">Projects</a> | <a href="FaithYap_Resume.pdf" download="FaithYap_Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a> | <a href="contact.php">Contact</a> </p>
+          </div>
+        </footer>
 	<script src="js/nav.js"></script>
 	<script src="js/project-desc.js"></script>
 </body>

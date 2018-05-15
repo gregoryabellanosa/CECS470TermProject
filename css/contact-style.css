@@ -115,6 +115,10 @@ input[type=submit]{
     float: left;
 }
 
-body{
-    padding-bottom: 20px;
+footer{
+    clear: both;
+}
+
+.contactad{
+    margin-bottom: 50px;
 }

@@ -106,7 +106,7 @@ h2{
 	}
 
 	.column-6{
-		width: 50%;
+		width: 45%;
 	}
 
 	.column-offset-6{
@@ -249,6 +249,9 @@ h3{
     color: white;
 }
 
+#about-me{
+    margin-left: 10%;
+}
 .footer{
 	margin-top: 5%;
 	max-width: 100%

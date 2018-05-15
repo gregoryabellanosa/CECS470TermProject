@@ -95,12 +95,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $stmt->execute();
 
-    echo "New records created successfully";
-
     $stmt->close();
     $conn->close();
+    
+    
 }
 
+echo "<div class=\"topbanner\"><marquee>This website is a student project and not a commercial site.</marquee></div>";
 ?>
 
 <!DOCTYPE html>
@@ -117,15 +118,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="index.html"><img class="logo" src="img/faithyaplogo.png"></a>
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="projects.php">Projects</a></li>
-            <li><a href=""><i class="fa fa-download" aria-hidden="true"></i> Resume</a></li>
-            <li><a class="hire" href="contact.php">Hire Me!</a></li>
+                <li><a class="currentpage" href="projects.php">Projects</a></li>
+                <li><a href="FaithYap_Resume.pdf" download="FaithYap_Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Resume</a></li>
+                <li><a class="hire" href="contact.php">Hire Me!</a></li>
         </ul>
         </nav>
         
         <div class="bluetitlesection">
             <h1>Contact Me</h1>
         </div>
+        
         
         <div class="profilephoto">
             <img src="img/faithprofile.jpg">
@@ -179,10 +181,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="contactad">
-            <h2>Download my resume!</h2>
-            See more about my past work experiences and projects.
-
-            <button type="button">DOWNLOAD</button><br/><br/>
+            <div class="contactadright">
+              <a class="contactadbutton" href="FaithYap_Resume.pdf" download="FaithYap_Resume.pdf">DOWNLOAD</a>
+            </div>
+            <h3>Download my resume!</h3>
+            <p>
+                See more about my past work experiences and projects
+            </p>
         </div>
+        <br/><br/>
+        <footer>
+          <div class="footerinfo">
+            <img class="logo" src="img/faithyaplogoinverted.png">
+            <div class="createdby">
+              <h4>Website Created By:</h4>
+              <p><i class="fa fa-male"></i> &nbsp;Gregory Abellanosa [ <a href="mailto:gregoryabellanosa@gmail.com">gregoryabellanosa@gmail.com</a> ]</p>
+              <p><i class="fa fa-female"></i> &nbsp;Caren Briones [ <a href="mailto:carenpbriones@gmail.com">carenpbriones@gmail.com</a> ]</p>
+              <p><i class="fa fa-male"></i> &nbsp;Marco Tran [ <a href="mailto:mtran0132@gmail.com">mtran0132@gmail.com</a> ]</p>
+              <hr>
+              <p>Latest Update: <!--#echo var="LAST_MODIFIED"--> </p>
+            </div>
+            <p><a href="index.php">Home</a> | <a class="currentpage" href="projects.php">Projects</a> | <a href="FaithYap_Resume.pdf" download="FaithYap_Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a> | <a href="contact.php">Contact</a> </p>
+          </div>
+        </footer>
     </body>
 </html>
