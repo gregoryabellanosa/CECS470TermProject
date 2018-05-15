@@ -5,7 +5,7 @@ session_start();
 $servername = "cecs-db01.coe.csulb.edu";
 $username = "cecs470o14";
 $password = "di7a3a";
-$database = "cecs470o14";
+$database = "cecs470sec01og04";
 
 $conn = new mysqli($servername, $username, $password, $database);
 
