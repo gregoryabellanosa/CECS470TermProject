@@ -23,7 +23,7 @@
 	  //find out how many rows are in the result set
 	  $numrows=mysqli_num_rows($result);
 
-    echo "<div class=\"topbanner\"><marquee>This website is a student project and not a commercial site.</marquee></div>";
+    echo "<div class=\"topbanner\">This website is a student project and not a commercial site.</div>";
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +40,7 @@
 </head>
 <body>
 	<nav class="topnav" id="nav">	
-		<a href="index.html"><img alt="Faith Yap" class="logo" src="img/faithyaplogo.png"></a>	
+		<a href="index.php"><img alt="Faith Yap" class="logo" src="img/faithyaplogo.png"></a>	
 		<ul>
 			<li><a class="currentpage" href="index.php">Home</a></li>
 			<li><a href="projects.php">Projects</a></li>
@@ -150,7 +150,7 @@
 			</div>
 			<div class="row">
 				<div class="column-12 project-button-link">
-					<a href="projects.html">
+					<a href="projects.php">
 						<div class="column-offset-6">
 							<p class="project-button">View More Projects &nbsp;<i class="fas fa-angle-right"></i></p>
 						</div>
@@ -198,7 +198,7 @@
 							<p style="font-size: 1.25em">Think I am someone you can work with? Let's work on something meaningful together.</p>
 						</div>
 						<div class="column-offset-6">
-							<a class="hire-connection" href="contact.html">Hire Me!</a>	
+							<a class="hire-connection" href="contact.php">Hire Me!</a>	
 						</div>
 					</div>
 				</div>
@@ -206,7 +206,7 @@
 			</div>
 	<footer>
           <div class="footerinfo">
-            <img class="logo" src="img/faithyaplogoinverted.png">
+            <img class="logo" src="img/faithyaplogoinverted.png" alt="Faith Yap Logo">
             <div class="createdby">
               <h4>Website Created By:</h4>
               <p><i class="fa fa-male"></i> &nbsp;Gregory Abellanosa [ <a href="mailto:gregoryabellanosa@gmail.com">gregoryabellanosa@gmail.com</a> ]</p>

@@ -20,7 +20,7 @@ if(! $retval ) {
       die('Could not get data: ' . mysql_error());
 }
 
-echo "<div class=\"topbanner\"><marquee>This website is a student project and not a commercial site.</marquee></div>";
+echo "<div class=\"topbanner\">This website is a student project and not a commercial site.</div>";
 // echo "<div class=\"topbanner\"><p>This website is a student project and not a commercial site.</p></div>";
 
 // mysql_close($conn);
@@ -40,7 +40,7 @@ echo "<div class=\"topbanner\"><marquee>This website is a student project and no
           <p>This website is a student project and not a commercial site.</p>
         </div> -->
         <nav>
-            <a href="index.html"><img class="logo" src="img/faithyaplogo.png"></a>
+            <a href="index.php"><img class="logo" src="img/faithyaplogo.png"></a>
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a class="currentpage" href="projects.php">Projects</a></li>
@@ -116,7 +116,7 @@ echo "<div class=\"topbanner\"><marquee>This website is a student project and no
         </div>
         <footer>
           <div class="footerinfo">
-            <img class="logo" src="img/faithyaplogoinverted.png">
+            <img class="logo" src="img/faithyaplogoinverted.png" alt="Faith Yap Logo">
             <div class="createdby">
               <h4>Website Created By:</h4>
               <p><i class="fa fa-male"></i> &nbsp;Gregory Abellanosa [ <a href="mailto:gregoryabellanosa@gmail.com">gregoryabellanosa@gmail.com</a> ]</p>
