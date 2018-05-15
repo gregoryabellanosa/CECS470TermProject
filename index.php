@@ -1,4 +1,35 @@
 #!/usr/local/php5/bin/php-cgi
+<?php
+	$servername = "cecs-db01.coe.csulb.edu";
+	$username = "cecs470o11";
+	$password = "suxoh4";
+	$database = "cecs470sec01og04";
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $database);
+
+	$error = mysqli_connect_error();
+	
+	//if there is a connection error...
+	if ($error != null) {
+		$output = "<p>Unable to connect to database<p>" . $error;
+	  // Outputs a message and terminates the current script
+	  exit($output);
+	  }
+
+	  //create the sql statement
+	  $sql = "SELECT project_name, project_desc, project_tagline, project_img, project_img_alt FROM project";
+
+	  $result = mysqli_query($conn, $sql);
+	  
+	  //find out how many rows are in the result set
+	  
+	  $numrows=mysqli_num_rows($result);
+	  
+	
+	  
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +47,9 @@
 		<a href="index.html"><img alt="picture1" class="logo" src="img/faithyaplogo.png"></a>	
 		<ul>
 			<li><a class="currentpage" href="index.php">Home</a></li>
-			<li><a href="projects.html">Projects</a></li>
+			<li><a href="projects.php">Projects</a></li>
 			<li><a href=""><i class="fa fa-download" aria-hidden="true"></i> Resume</a></li>
-			<li><a class="hire" href="contact.html">Hire Me!</a></li>
+			<li><a class="hire" href="contact.php">Hire Me!</a></li>
 			<li><a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()"><i class="fa fa-bars"></i></a></li>
 		</ul>
 	</nav>
@@ -97,6 +128,29 @@
 				</div>
 			</div>
 			<div class="row">
+				<?php
+					$x = 0;
+					//loop through the result set
+					if ($result=mysqli_query($conn,$sql))
+					{
+					// Fetch one and one row
+						while ($row=mysqli_fetch_assoc($result))
+						{
+							echo "<div class=\"column-4 column-s-12\">";
+							echo "<div class=\"project-desc\">";
+							echo "<img alt=\"" . $row["project_img_alt"] . "\" src=\"img/" . $row["project_img"]."\" class=\"project-image\">";
+							echo "<h2><strong>" . $row["project_name"] . "</strong></h2>";
+							echo "<p class=\"tagline\">" . $row["project_tagline"] . "</p>";
+							echo "<p>" . $row["project_desc"] . "</p>";
+							echo "</div>";
+							echo "</div>";
+						}
+
+	   					// Free result set
+	    				mysqli_free_result($result);
+						mysqli_close($conn);
+					}
+				?>
 				<div class="column-4 column-s-12">
 					<div class="project-desc">
 						<img alt="picture1" src="img/project-1.jpeg" class="project-image">
