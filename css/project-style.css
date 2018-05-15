@@ -4,6 +4,15 @@ body {
   padding: 0px;
 }
 
+.topbanner
+{
+  margin: 0px;
+  background-color: #efc74f;
+  height: 25px;
+  padding-top: 6px;
+  padding-bottom: 2px;
+}
+
 nav {
   padding: 1% 5% 0% 5%;
   margin: 10px 0px 10px 0px;
