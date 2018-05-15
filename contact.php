@@ -116,10 +116,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <nav>
         <a href="index.html"><img class="logo" src="img/faithyaplogo.png"></a>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="projects.php">Projects</a></li>
             <li><a href=""><i class="fa fa-download" aria-hidden="true"></i> Resume</a></li>
-            <li><a class="hire" href="contact.html">Hire Me!</a></li>
+            <li><a class="hire" href="contact.php">Hire Me!</a></li>
         </ul>
         </nav>
         
