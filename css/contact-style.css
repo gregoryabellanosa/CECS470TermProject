@@ -1,0 +1,120 @@
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid black;
+    max-width: 90%;
+}
+
+.selections{
+    padding-left: 10px;
+}
+
+input{
+    padding-top: 8px;
+    font-size: 15px;
+}
+
+input:focus, textarea:focus, button:focus{
+    outline: none;
+}
+
+textarea{
+    width: 400px;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+}
+
+form{
+    padding: 15px;
+}
+
+button, input[type=submit] {
+	border-radius: 6px;
+	background-color: #3C75AF;
+	padding: 10px 20px;
+    color: white;
+}
+
+.profilephoto{
+    float: left;
+    width: 100%;
+    padding: 20px 20px 20px 40px;
+}
+
+.messageform{
+    float: left;
+    padding: 15px;
+    min-width: 550px;
+}
+
+@media screen and (min-width: 600px) {
+    .profilephoto {
+        width: 30%;
+    }
+    .messageform{
+        width: 60%;
+    }
+    .leftcolumnform{
+        width: 45%;
+    }
+    .rightcolumnform{
+        width: 45%;
+    }
+    .selectionsrowform{
+        width: 90%;
+    }
+    .messagerowform{
+        width: 90%;
+    }
+    .contactad{
+        width: 100%;
+    }
+}
+
+.leftcolumnform, .rightcolumnform{
+    padding: 10px;
+}
+
+.contactad{
+    float:left;
+    padding: 20px;
+}
+
+.profilephoto img{
+    border-radius: 50%;
+    max-width: 360px;
+    width:100%;
+}
+
+.errormsg{
+    padding-left: 20px;
+    color: red;
+}
+
+.leftcolumnform, .rightcolumnform, .selectionsrowform, .messagerowform{
+    float: left;
+}
+
+.leftcolumnform label, .rightcolumnform label, .messagerowform label{
+    color: dimgrey;
+}
+
+.selectionsrowform{
+    background-color: #F6F8FB;
+    padding: 10px;
+    text-align: center;
+    min-width: 540px;
+}
+
+.selectionsrowform label{
+    padding: 0% 5% 0% 5%;
+}
+
+input[type=submit]{
+    float: left;
+}
+
+body{
+    padding-bottom: 20px;
+}
