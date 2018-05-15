@@ -40,7 +40,7 @@ echo "<div class=\"topbanner\"><marquee>This website is a student project and no
           <p>This website is a student project and not a commercial site.</p>
         </div> -->
         <nav>
-            <a href="index.html"><img class="logo" src="img/faithyaplogo.png"></a>
+            <a href="index.php"><img class="logo" src="img/faithyaplogo.png"></a>
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a class="currentpage" href="projects.php">Projects</a></li>
