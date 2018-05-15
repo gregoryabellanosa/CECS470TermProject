@@ -1,0 +1,39 @@
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .topnav li:not(:last-child){
+  	display:none;
+  }
+  
+  .topnav a.icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav.responsive {
+  	position: relative;
+  }
+  
+  .topnav.responsive a.icon {
+  	position: absolute;
+    right: 28px;
+    top: 10px;
+  }
+
+  .topnav.responsive ul{
+  	margin:0;
+  	float: none;
+
+  }
+  .topnav.responsive li {
+    float: none;
+    display: block;
+    padding:20px;
+    text-align: left;
+  }
+
+}
