@@ -40,7 +40,7 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
           <p>This website is a student project and not a commercial site.</p>
         </div> -->
         <nav>
-            <a href="index.php"><img class="logo" src="img/faithyaplogo.png"></a>
+            <a href="index.php"><img class="logo" src="img/faithyaplogo.png" alt="Faith Yap logo"></a>
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a class="currentpage" href="projects.php">Projects</a></li>
@@ -123,7 +123,7 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
               <p><i class="fa fa-female"></i> &nbsp;Caren Briones [ <a href="mailto:carenpbriones@gmail.com">carenpbriones@gmail.com</a> ]</p>
               <p><i class="fa fa-male"></i> &nbsp;Marco Tran [ <a href="mailto:mtran0132@gmail.com">mtran0132@gmail.com</a> ]</p>
               <hr>
-              <p>Latest Update: <!--#echo var="LAST_MODIFIED"--> </p>
+               <?php echo "<p>Last modified: " . date ("F d Y H:i:s.", getlastmod()) . "</p>"; ?>
             </div>
             <p><a href="index.php">Home</a> | <a class="currentpage" href="projects.php">Projects</a> | <a href="FaithYap_Resume.pdf" download="FaithYap_Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a> | <a href="contact.php">Contact</a> </p>
           </div>
