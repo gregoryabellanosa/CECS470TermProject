@@ -40,7 +40,7 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
           <p>This website is a student project and not a commercial site.</p>
         </div> -->
         <nav>
-            <a href="index.php"><img class="logo" src="img/faithyaplogo.png"></a>
+            <a href="index.php"><img alt="Faith Yap Log" class="logo" src="img/faithyaplogo.png"></a>
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a class="currentpage" href="projects.php">Projects</a></li>
@@ -57,7 +57,7 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
         {
           echo "<div id=\"project$i\" class=\"project--container\">".
                "<div class=\"project--photo\">".
-               "<img src=\"img/{$row['project_img']}\">".
+               "<img alt=\"{$row['project_img_alt']}\" src=\"img/{$row['project_img']}\">".
                "</div>".
                "<div class=\"project--text\">".
                "<h2>{$row['project_name']}</h2>".
@@ -90,7 +90,7 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
         {
           echo "<div class=\"project--container\">".
                "<div class=\"project--photo\">".
-               "<img src=\"img/{$row['experience_img']}\">".
+               "<img alt=\"{$row['experience_img_alt']}\" src=\"img/{$row['experience_img']}\">".
                "</div>".
                "<div class=\"project--text\">".
                "<h2>{$row['experience_name']}</h2>".
