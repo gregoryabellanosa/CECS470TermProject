@@ -8,7 +8,7 @@
 	$conn = new mysqli($servername, $username, $password, $database);
 
 	$error = mysqli_connect_error();
-	
+
 	//if there is a connection error...
 	if ($error != null) {
 		$output = "<p>Unable to connect to database<p>" . $error;
@@ -19,7 +19,7 @@
 	  //create the sql statement
 	  $sql = "SELECT project_name, project_desc, project_tagline, project_img, project_img_alt FROM project";
 	  $result = mysqli_query($conn, $sql);
-	  
+
 	  //find out how many rows are in the result set
 	  $numrows=mysqli_num_rows($result);
 
@@ -39,8 +39,8 @@
 	<meta name="viewport" content="width=device-width">
 </head>
 <body>
-	<nav class="topnav" id="nav">	
-		<a href="index.php"><img alt="Faith Yap" class="logo" src="img/faithyaplogo.png"></a>	
+	<nav class="topnav" id="nav">
+		<a href="index.php"><img alt="Faith Yap" class="logo" src="img/faithyaplogo.png"></a>
 		<ul>
 			<li><a class="currentpage" href="index.php">Home</a></li>
 			<li><a href="projects.php">Projects</a></li>
@@ -55,16 +55,14 @@
 				<img alt="Faith Yap Profile Picture" class="profile-picture" src="img/faithprofile.jpg">
 			</div>
 			<div class="column-6 column-s-12" id="about-me">
-				<h2>Computer Science Graduate &amp; Something Else </h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
-				<p>State the Goal and Objective</p>
+				<h2>Computer Science Graduate &amp; Coding Enthusiast </h2>
+				<p>
+					I am recent Computer Science gradate from California State University, Long Beach. With the pursuit of my degree, I have developed a progressing appreciation for certain coding languages and pracitces. After continually exposing myself to a varying range of concepts, I find I can apply these skills between different languages. Aside from coding, I enjoy playing video games, watching movies, and being a foodie.
+				</p>
 				<div class="social-icons">
-					<i class="fab fa-instagram"></i>
-					<i class="fab fa-github"></i>
-					<i class="fab fa-linkedin"></i>
+					<a href="https://www.instagram.com/faithallyson/"><i class="fab fa-instagram"></i></a>
+					<a href="https://github.com/faithyap"><i class="fab fa-github"></i></a>
+					<a href="https://www.linkedin.com/in/faith-yap/"><i class="fab fa-linkedin"></i></a>
 				</div>
 			</div>
 		</div>
@@ -146,13 +144,14 @@
 						mysqli_close($conn);
 					}
 				?>
-				
+
 			</div>
 			<div class="row">
 				<div class="column-12 project-button-link">
 					<a href="projects.php">
 						<div class="column-offset-6">
 							<p class="project-button">View More Projects &nbsp;<i class="fas fa-angle-right"></i></p>
+							<br />
 						</div>
 					</a>
 				</div>
@@ -169,24 +168,16 @@
 						<div class="job-entry">
 							<h2>COE EXCEL PEER MENTOR &amp; TUTOR</h2>
 							<p class="tagline">CSULB College of Engineering, June 2017 - Present</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>
+								Becoming a tutor and mentor for the College of Engineering's EXCEL program was one of the most rewarding experiences of my life. For the year I worked with them, I can say that every person that surrounded me was a blessing, from my bosses to my coworkers to even strangers that came to the tutoring center. This job gave me a sense of purpose, and it reminded me to always give back and share what you've learned to help better the next generation of STEM students.
+							</p>
 						</div>
 					</div>
 					<div class="column-12">
 						<div class="job-entry">
 							<h2>HIGH SCHOOL MATH &amp; ENGLISH TUTOR</h2>
 							<p class="tagline">June 2017 - Present</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>I helped high school students understand concepts and complete homework for Math and English classes.</p>
 						</div>
 					</div>
 				</div>
@@ -198,7 +189,7 @@
 							<p style="font-size: 1.25em">Think I am someone you can work with? Let's work on something meaningful together.</p>
 						</div>
 						<div class="column-offset-6">
-							<a class="hire-connection" href="contact.php">Hire Me!</a>	
+							<a class="hire-connection" href="contact.php">Hire Me!</a>
 						</div>
 					</div>
 				</div>

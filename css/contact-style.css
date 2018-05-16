@@ -34,6 +34,13 @@ button, input[type=submit] {
 	background-color: #3C75AF;
 	padding: 10px 20px;
     color: white;
+    border: 1px solid #3C75AF;
+}
+
+input[type=submit]:hover {
+  border: 1px solid #3C75AF;
+  background-color: #f6f8fb;
+  color: #3C75AF;
 }
 
 .profilephoto{

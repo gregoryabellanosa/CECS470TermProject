@@ -15,7 +15,7 @@ body, html{
 }
 
 p{
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 h2{
@@ -50,6 +50,13 @@ h2{
   color: #FFF;
   padding: 8px 20px 8px 20px;
   text-decoration: none;
+}
+
+.hire-connection:hover
+{
+  border: 1px solid #3C75AF;
+  background-color: #f5f2f2;
+  color: #3C75AF;
 }
 
 .row{
@@ -135,6 +142,15 @@ h2{
 	border-radius: 50%;
 	padding: 0.2em;
 	color: #3C75AF;
+  border: 1px solid #ffffff;
+  margin-right: 5px;
+}
+
+.social-icons i:hover
+{
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: #3C75AF;
 }
 
 .profile-picture{
@@ -220,6 +236,13 @@ h3{
 	border-radius: 8px;
 	background-color: #3C75AF;
 	padding: 12px 38px;
+  border: 1px solid #3C75AF;
+}
+
+.project-button:hover {
+  border: 1px solid #3C75AF;
+  background-color: #f5f2f2;
+  color: #3C75AF;
 }
 
 .project-button-link{
