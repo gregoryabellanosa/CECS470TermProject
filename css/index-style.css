@@ -223,6 +223,19 @@ h3{
 	padding-left:0.5em;
 }
 
+.readmore
+{
+  color: #3C75AF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.readmore:hover
+{
+  /* color: black; */
+  text-decoration: underline;
+}
+
 .project-image{
 	width: 100%;
 	height: auto;
