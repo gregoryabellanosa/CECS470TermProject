@@ -83,8 +83,9 @@ button, input[type=submit] {
 
 .profilephoto img{
     border-radius: 50%;
-    max-width: 360px;
+    max-width: 420px;
     width:100%;
+    margin: auto;
 }
 
 .errormsg{
@@ -102,7 +103,7 @@ button, input[type=submit] {
 
 .selectionsrowform{
     background-color: #F6F8FB;
-    padding: 10px;
+    padding: 20px 10px 20px 10px;
     text-align: center;
     min-width: 540px;
 }
@@ -121,4 +122,35 @@ footer{
 
 .contactad{
     margin-bottom: 50px;
+}
+
+.error {
+    background: #FFCDD2;
+    box-shadow: 0 0 5px #FF5252;
+    border-color: #FF1744;    
+}
+
+h2{
+    padding: 0px 0px 0px 30px;
+}
+
+.messages p{
+    padding: 0px;
+}
+
+.messages{
+    padding: 10px 30px 10px 30px;
+    margin: auto;
+    max-width: 60%;
+}
+
+.messagerow{
+    border: 1px solid dimgray;
+    background-color: #F6F8FB;
+    padding: 0px 15px 15px 15px;
+}
+
+.messagerow h3{
+    color: #3C75AF;
+    padding: 0px;
 }
