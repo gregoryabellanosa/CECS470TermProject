@@ -12,7 +12,7 @@ function FindShortest()
 			shortest = text[i].children[3].innerText.length;
 		}
 	}
-	return shortest - 10;
+	return shortest - (shortest/2);
 }
 
 function ReduceText()

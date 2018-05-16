@@ -2,18 +2,19 @@
 <?php
 session_start();
 
+// Connection to the database
 $servername = "cecs-db01.coe.csulb.edu";
 $username = "cecs470o14";
 $password = "di7a3a";
 $database = "cecs470sec01og04";
-
 $conn = new mysqli($servername, $username, $password, $database);
 
+// Warning if connection does not go through
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// prepare and bind
+// Prepare and bind values
 $stmt = $conn->prepare("INSERT INTO message (message_contactName, message_email, message_phoneNumber, message_subject, message_type, message_body) VALUES (?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssssss", $message_contactName, $message_email, $message_phoneNumber, $message_subject, $message_type, $message_body);
 
@@ -28,6 +29,7 @@ function test_input($data){
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $confirmationMsg = "";
     
     // Validation for contact name
     if (empty($_POST["message_contactName"])) {
@@ -71,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validation for message type
     if (empty($_POST["message_type"])) {
-        $message_type = "Message type is required.";
+        $typeErr = "Message type is required.";
     } else {
         $message_type = test_input($_POST["message_type"]);
     }
@@ -83,6 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message_body = test_input($_POST["message_body"]);
     }
     
+    // If required fields are not empty, post values
     if($message_contactName !== "" && $message_email !== "" && message_subject !== "" && $message_type !== "" && message_body !== ""){
         $_SESSION['message_contactName'] = $_POST['message_contactName'];
         $_SESSION['message_email'] = $_POST['message_email'];
@@ -90,11 +93,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['message_subject'] = $_POST['message_subject'];
         $_SESSION['message_type'] = $_POST['message_type'];
         $_SESSION['message_body'] = $_POST['message_body'];
-//        header("Location: results.php");
+        
+        $confirmationMsg = "Your message was sent successfully. Thank you for contacting me.";
+        
+        // Executes the statement and closes the connection
         $stmt->execute();
-
         $stmt->close();
         $conn->close();
+        
+//        header("Location: messages.php");
     }
 }
 
@@ -103,6 +110,7 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
 
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
         <meta charset="utf-8">
         <title>Contact Me | Faith Yap</title>
@@ -110,14 +118,16 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
         <link rel="stylesheet" href="css/contact-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+    
     <body>
+        
         <nav>
-        <a href="index.php"><img class="logo" src="img/faithyaplogo.png"></a>
+        <a href="index.php"><img class="logo" src="img/faithyaplogo.png" alt="Faith Yap logo"></a>
         <ul>
             <li><a href="index.php">Home</a></li>
-                <li><a href="projects.php">Projects</a></li>
-                <li><a href="FaithYap_Resume.pdf" download="FaithYap_Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Resume</a></li>
-                <li><a class="hire" href="contact.php">Hire Me!</a></li>
+            <li><a href="projects.php">Projects</a></li>
+            <li><a href="FaithYap_Resume.pdf" download="FaithYap_Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Resume</a></li>
+            <li><a class="hire" href="contact.php">Hire Me!</a></li>
         </ul>
         </nav>
         
@@ -127,12 +137,13 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
         
         
         <div class="profilephoto">
-            <img src="img/faithprofile.jpg">
+            <img src="img/faithprofile.jpg" alt="Faith Yap profile picture">
         </div>
-
-
+        
+        <p><strong><?php echo $confirmationMsg;?></strong></p>
+        
         <div class="messageform">
-            <form method="post" action="<?php echo htmlspecialchars ($_SERVER["PHP_SELF"]);?>">
+            <form method="post" onsubmit="submitForm(event)" action="<?php echo htmlspecialchars ($_SERVER["PHP_SELF"]);?>">
                 
                 <div class="leftcolumnform">
                     <label for="name">Your Name*</label> <br/>
@@ -152,7 +163,7 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
                     <span class="errormsg"><?php echo $phoneNumberErr;?></span><br/>
                     <br/>
 
-                    <label for="email">Subject*</label><br/>
+                    <label for="subject">Subject*</label><br/>
                     <input type="text" id= "subject" name="message_subject"/><br/>
                     <span class="errormsg"><?php echo $subjectErr;?></span><br/>
                     <br/>
@@ -162,8 +173,11 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
                 <div class="selectionsrowform">
                     <label for="contactType1" class="choice"><input type="radio" id="contactType1" value="Job Inquiry" name="message_type">Job Inquiry</label>
                     <label for="contactType2" class="choice"><input type="radio" id="contactType2" value="Project Commission" name="message_type">Project Commission</label>
-                    <label for="contactType3" class="choice"><input type="radio" id="contactType3" value="Comment" name="message_type">Comment</label><br/>
-                </div><br/><br/>
+                    <label for="contactType3" class="choice"><input type="radio" id="contactType3" value="Comment" name="message_type">Comment</label>
+                    <br/>
+                </div>
+                <span class="errormsg"><?php echo $typeErr;?></span>
+                <br/><br/>
                 
                 <div class="messagerowform">
                     <br/>
@@ -172,8 +186,8 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
                     <span class="errormsg"><?php echo $bodyErr;?></span><br/>
                     <br/>
                 </div>
-                <br/>
-                <input type="submit" value="CONTACT ME">
+                <br/><br/>
+                <input type="submit" class="contactadbutton" value="CONTACT ME"/>
             </form>
         </div>
 
@@ -188,18 +202,20 @@ echo "<div class=\"topbanner\">This website is a student project and not a comme
         </div>
         <br/><br/>
         <footer>
-          <div class="footerinfo">
-            <img class="logo" src="img/faithyaplogoinverted.png" alt="Faith Yap Logo">
-            <div class="createdby">
-              <h4>Website Created By:</h4>
-              <p><i class="fa fa-male"></i> &nbsp;Gregory Abellanosa [ <a href="mailto:gregoryabellanosa@gmail.com">gregoryabellanosa@gmail.com</a> ]</p>
-              <p><i class="fa fa-female"></i> &nbsp;Caren Briones [ <a href="mailto:carenpbriones@gmail.com">carenpbriones@gmail.com</a> ]</p>
-              <p><i class="fa fa-male"></i> &nbsp;Marco Tran [ <a href="mailto:mtran0132@gmail.com">mtran0132@gmail.com</a> ]</p>
-              <hr>
-              <p>Latest Update: <!--#echo var="LAST_MODIFIED"--> </p>
+            <div class="footerinfo">
+                <img class="logo" src="img/faithyaplogoinverted.png" alt="Faith Yap Logo">
+                
+                <div class="createdby">
+                    <h4>Website Created By:</h4>
+                    <p><i class="fa fa-male"></i> &nbsp;Gregory Abellanosa [ <a href="mailto:gregoryabellanosa@gmail.com">gregoryabellanosa@gmail.com</a> ]</p>
+                    <p><i class="fa fa-female"></i> &nbsp;Caren Briones [ <a href="mailto:carenpbriones@gmail.com">carenpbriones@gmail.com</a> ]</p>
+                    <p><i class="fa fa-male"></i> &nbsp;Marco Tran [ <a href="mailto:mtran0132@gmail.com">mtran0132@gmail.com</a> ]</p>
+                    <hr>
+              <?php echo "<p>Last modified: " . date ("F d Y H:i:s.", getlastmod()) . "</p>"; ?>
+                </div>
+                
+                <p><a href="index.php">Home</a> | <a class="currentpage" href="projects.php">Projects</a> | <a href="FaithYap_Resume.pdf" download="FaithYap_Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a> | <a href="contact.php">Contact</a> | <a href="messages.php">Messages</a> </p>
             </div>
-            <p><a href="index.php">Home</a> | <a class="currentpage" href="projects.php">Projects</a> | <a href="FaithYap_Resume.pdf" download="FaithYap_Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a> | <a href="contact.php">Contact</a> </p>
-          </div>
         </footer>
     </body>
 </html>

@@ -26,7 +26,6 @@
     echo "<div class=\"topbanner\">This website is a student project and not a commercial site.</div>";
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -46,7 +45,7 @@
 			<li><a href="projects.php">Projects</a></li>
 			<li><a href=""><i class="fa fa-download" aria-hidden="true"></i> Resume</a></li>
 			<li><a class="hire" href="contact.php">Hire Me!</a></li>
-			<li><a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()"><i class="fa fa-bars"></i></a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()" aria-label="Hamburger Menu"><i class="fa fa-bars"></i></a></li>
 		</ul>
 	</nav>
 	<div class="wrapper">
@@ -60,9 +59,9 @@
 					I am recent Computer Science gradate from California State University, Long Beach. With the pursuit of my degree, I have developed a progressing appreciation for certain coding languages and pracitces. After continually exposing myself to a varying range of concepts, I find I can apply these skills between different languages. Aside from coding, I enjoy playing video games, watching movies, and being a foodie.
 				</p>
 				<div class="social-icons">
-					<a href="https://www.instagram.com/faithallyson/"><i class="fab fa-instagram"></i></a>
-					<a href="https://github.com/faithyap"><i class="fab fa-github"></i></a>
-					<a href="https://www.linkedin.com/in/faith-yap/"><i class="fab fa-linkedin"></i></a>
+					<a href="https://www.instagram.com/faithallyson/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+					<a href="https://github.com/faithyap" aria-label="GitHub"><i class="fab fa-github"></i></a>
+					<a href="https://www.linkedin.com/in/faith-yap/"aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
 				</div>
 			</div>
 		</div>
@@ -122,7 +121,6 @@
 			</div>
 			<div class="row">
 				<?php
-					$x = 0;
 					//loop through the result set
 					if ($result=mysqli_query($conn,$sql))
 					{
@@ -139,9 +137,8 @@
 							echo "</div>";
 						}
 
-	   					// Free result set
-	    				mysqli_free_result($result);
-						mysqli_close($conn);
+
+
 					}
 				?>
 
@@ -164,24 +161,30 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="column-12">
-						<div class="job-entry">
-							<h2>COE EXCEL PEER MENTOR &amp; TUTOR</h2>
-							<p class="tagline">CSULB College of Engineering, June 2017 - Present</p>
-							<p>
-								Becoming a tutor and mentor for the College of Engineering's EXCEL program was one of the most rewarding experiences of my life. For the year I worked with them, I can say that every person that surrounded me was a blessing, from my bosses to my coworkers to even strangers that came to the tutoring center. This job gave me a sense of purpose, and it reminded me to always give back and share what you've learned to help better the next generation of STEM students.
-							</p>
-						</div>
-					</div>
-					<div class="column-12">
-						<div class="job-entry">
-							<h2>HIGH SCHOOL MATH &amp; ENGLISH TUTOR</h2>
-							<p class="tagline">June 2017 - Present</p>
-							<p>I helped high school students understand concepts and complete homework for Math and English classes.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+				<?php
+					$sql = "SELECT experience_name, experience_desc, experience_tagline FROM experience";
+					$result = mysqli_query($conn, $sql);
+					//loop through the result set
+					if ($result=mysqli_query($conn,$sql))
+					{
+					// Fetch one and one row
+						while ($row=mysqli_fetch_assoc($result))
+						{
+							echo "<div class=\"column-12\">";
+							echo "<div class=\"job-entry\">";
+							echo "<h2>" . $row["experience_name"] . "</h2>";
+							echo "<p class=\"tagline\">" . $row["experience_tagline"] . "</p>";
+							echo "<p>" . $row["experience_desc"] . "</p>";
+							echo "</div>";
+							echo "</div>";
+						}
+
+	   					// Free result set
+	    				mysqli_free_result($result);
+						mysqli_close($conn);
+					}
+				?>				
+
 				<div class="row">
 					<div class="column-12"  id="connection">
 						<div class="column-6 column-s-12">
@@ -204,7 +207,8 @@
               <p><i class="fa fa-female"></i> &nbsp;Caren Briones [ <a href="mailto:carenpbriones@gmail.com">carenpbriones@gmail.com</a> ]</p>
               <p><i class="fa fa-male"></i> &nbsp;Marco Tran [ <a href="mailto:mtran0132@gmail.com">mtran0132@gmail.com</a> ]</p>
               <hr>
-              <p>Latest Update: <!--#echo var="LAST_MODIFIED"--> </p>
+			  
+              <?php echo "<p>Last modified: " . date ("F d Y H:i:s.", getlastmod()) . "</p>"; ?>
             </div>
             <p><a href="index.php">Home</a> | <a class="currentpage" href="projects.php">Projects</a> | <a href="FaithYap_Resume.pdf" download="FaithYap_Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a> | <a href="contact.php">Contact</a> </p>
           </div>
